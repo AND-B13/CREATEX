@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+@mixin flex-v-end {
+  display: flex;
+  align-items: flex-end;
+}
+
 @mixin flex-h-center {
   display: flex;
   justify-content: center;
@@ -29,3 +34,10 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
