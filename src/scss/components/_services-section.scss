@@ -1,7 +1,124 @@
 .services-section {
   padding-top: 212px;
+  padding-bottom: 80px;
   background-image: url("../img/services-bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  &__list {
+    margin-bottom: 80px;
+  }
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+}
+
+.services-item {
+  position: relative;
+  display: block;
+  padding: 87px 10px 90px 10px;
+  border: 1px solid #e5e8ed;
+  border-radius: 4px;
+  box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
+  background: var(--color-light);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    border-radius: inherit;
+    background-color: var(--color-ebony-clay);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    border-radius: inherit;
+    background-color: rgb(#1e212c, 0.6);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 5;
+    @include flex-column-center;
+  }
+
+  &__icon {
+    margin-bottom: 23px;
+    width: 52px;
+    height: 52px;
+    fill: var(--color-primary);
+    transition: fill .3s ease-in-out;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-ebony-clay);
+    transition: color .3s ease-in-out;
+  }
+
+  &--construct {
+    &::before {
+      background-image: url("../img/services-one.jpg");
+    }
+  }
+
+  &--project {
+    &::before {
+      background-image: url("../img/services-two.jpg");
+    }
+  }
+
+  &--interior {
+    &::before {
+      background-image: url("../img/services-three.jpg");
+    }
+  }
+
+  &--repairs {
+    &::before {
+      background-image: url("../img/services-four.jpg");
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+    &::after {
+      opacity: 1;
+    }
+
+    .services-item__icon {
+      fill: var(--color-light);
+    }
+
+    .services-item__title {
+      color: var(--color-light);
+    }
+  }
 }

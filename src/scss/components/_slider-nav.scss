@@ -1,0 +1,28 @@
+.slider-nav {
+  @include flex-v-center;
+  position: relative;
+  z-index: 4;
+
+  &__btn {
+    @include flex-all-center;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    color: var(--color-grey);
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+      color: inherit;
+      fill: currentColor;
+      object-fit: cover;
+    }
+
+    &:hover {
+      color: var(--color-light);
+      background-color: var(--color-primary);
+    }
+  }
+}

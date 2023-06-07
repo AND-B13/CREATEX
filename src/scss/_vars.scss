@@ -3,12 +3,13 @@
   --font-family: "Ubuntu", sans-serif;
   --content-width: 1230px;
   --container-offset: 15px;
+  --grid-gap: 30px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
   --color-light: #fff;
   --color-grey: #424551;
   --color-ebony-clay: #1e212c;
-  --color-storm-gray : #787a80;
+  --color-storm-gray: #787a80;
   --color-primary: #ff5a30;
 }
