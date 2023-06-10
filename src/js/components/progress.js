@@ -1,12 +1,14 @@
-const circle = document.querySelector('.progress')
+const circle = document.querySelectorAll('.facts-element__circle');
+circle.forEach(el => {
+  const percentageProgress = Math.floor(el.dataset.percent);
+  progressAnimation(el, percentageProgress);
+})
 
-const progressAnimation = () => {
-  const percentageProgress = Math.floor(85);
-
-  const radius = circle.getAttribute('r');
+function progressAnimation(element, progress) {
+  const elementCircle = element.querySelector('.progress');
+  const radius = elementCircle.getAttribute('r');
   const circleLength = 2 * Math.PI * radius;
-  circle.setAttribute('stroke-dasharray', circleLength);
-  circle.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
-}
 
-progressAnimation();
+  elementCircle.setAttribute('stroke-dasharray', circleLength);
+  elementCircle.setAttribute('stroke-dashoffset', circleLength - circleLength * progress / 100);
+}

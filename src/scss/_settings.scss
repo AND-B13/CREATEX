@@ -160,6 +160,11 @@ a {
   }
 }
 
+.centered {
+  width: 100%;
+  text-align: center;
+}
+
 .title {
   margin: 0;
   margin-bottom: 25px;
@@ -190,3 +195,6 @@ a {
   padding-top: 120px;
 }
 
+.custom-checkbox {
+  @include custom-checkbox;
+}
