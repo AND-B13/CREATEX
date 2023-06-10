@@ -1,0 +1,36 @@
+.hero-secondary {
+  padding-top: 153px;
+  min-height: 600px;
+  background-color: var(--color-athens-gray);
+
+  &--services {
+    background-image: url("../img/hero-services-bg.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    max-width: 600px;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 130%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-ebony-clay);
+  }
+
+  &__descr {
+    margin: 0;
+    max-width: 600px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-storm-gray);
+  }
+}
