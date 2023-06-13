@@ -1,0 +1,63 @@
+.how-we-do {
+  padding: 45px 0;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+    counter-reset: section;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-column: 3 span;
+
+    &::before {
+      counter-increment: section;
+      content: "0"counter(section);
+      margin-bottom: 16px;
+      font-weight: 700;
+      font-size: 46px;
+      line-height: 130%;
+      color: #D7DADD;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 30px;
+        right: 0;
+        height: 1.5px;
+        width: 73%;
+        background-image: url("../img/line-dashed.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 9px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-ebony-clay);
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-storm-gray);
+  }
+}

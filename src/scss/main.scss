@@ -4,7 +4,7 @@
 @import "fonts";
 @import "settings";
 
-// Перенесены для перебития стилей свайпера
+// Перенесены для перебития стилей
 @import "./components/slider-nav";
 @import "./components/form-field";
 
@@ -23,6 +23,10 @@
 @import "./components/footer";
 
 @import "./components/hero-secondary";
+@import "./components/services-content";
+
+@import "./components/we-offer";
+@import "./components/how-we-do";
 
 // подключения мини-компонентов страницы
 @import "./components/nav";

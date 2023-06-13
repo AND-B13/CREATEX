@@ -1,12 +1,18 @@
 .hero-secondary {
   padding-top: 153px;
+  padding-bottom: 80px;
   min-height: 600px;
   background-color: var(--color-athens-gray);
+  background-repeat: no-repeat;
 
   &--services {
     background-image: url("../img/hero-services-bg.png");
     background-position: right top;
-    background-repeat: no-repeat;
+  }
+
+  &--interior-design {
+    background-image: url("../img/hero-interior-design-bg.png");
+    background-position: right top;
   }
 
   &__breadcrumbs {
