@@ -1,0 +1,47 @@
+.pricing {
+
+}
+
+.table {
+  width: 100%;
+  border: 1px solid #E5E8ED;
+  border-radius: 4px;
+  background: var(--color-light);
+  box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
+
+  &__th {
+    &:first-child {
+      text-align: left;
+    }
+  }
+
+  &__body {
+    .table__row {
+      &:nth-child(odd) {
+        background-color: #F4F5F7;
+      }
+    }
+  }
+
+  &__col {
+    text-align: center;
+
+    &:first-child {
+      text-align: left;
+    }
+  }
+
+  &__check {
+    display: inline-block;
+    font-size: 0;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background-image: url("../img/table-check.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+
