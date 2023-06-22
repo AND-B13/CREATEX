@@ -1,8 +1,15 @@
 .pricing {
-
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background-image: url("../img/pricing-bg.png");
+  background-color: var(--color-athens-gray);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .table {
+  position: relative;
   width: 100%;
   border: 1px solid #E5E8ED;
   border-radius: 4px;
@@ -10,9 +17,37 @@
   box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
 
   &__th {
+    padding-top: 28px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
     &:first-child {
+      padding-left: 21px;
       text-align: left;
+      vertical-align: bottom;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      color: var(--color-ebony-clay);
     }
+  }
+
+  &__heading {
+    margin-bottom: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--color-ebony-clay);
+  }
+
+  &__per {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-storm-gray);
   }
 
   &__body {
@@ -20,19 +55,52 @@
       &:nth-child(odd) {
         background-color: #F4F5F7;
       }
+
+      &:last-child {
+        .table__col {
+          padding-top: 34px;
+          padding-bottom: 29px;
+        }
+      }
     }
   }
 
   &__col {
+    padding-top: 15px;
+    padding-right: 10px ;
+    padding-bottom: 15px;
     text-align: center;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-grey);
+
+    .btn {
+      display: inline-block;
+      padding: 7px 20px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
 
     &:first-child {
+      padding-left: 21px;
       text-align: left;
     }
   }
 
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var();
+  }
+
   &__check {
     display: inline-block;
+    vertical-align: middle;
     font-size: 0;
     width: 24px;
     height: 24px;

@@ -1,0 +1,101 @@
+.portfolio {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.portfolio-tabs-nav {
+  @include flex-v-center;
+  margin-bottom: 60px;
+  transform: translateY(-59px);
+
+  &__item {
+    width: calc((100% / 5) - 16px);
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__button {
+    @include flex-column-center;
+    justify-content: center;
+
+    padding: 15px;
+    width: 100%;
+    min-height: 154px;
+    border-radius: 4px;
+    color: var(--color-primary);
+    box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
+    background-color: var(--color-light);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &--active {
+      color: var(--color-light);
+      background-color: var(--color-primary);
+      pointer-events: none;
+
+      .portfolio-tabs-nav__text {
+        color: var(--color-light);
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    margin-bottom: 18px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    color: inherit;
+    fill: currentColor;
+    pointer-events: none;
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: #9a9ca5;
+    pointer-events: none;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+.portfolio-tabs {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+
+  &__item {
+    display: none;
+    grid-column: 4 span;
+    border-radius: 4px;
+
+    &--visible {
+      display: block;
+    }
+
+    &--visible-more {
+      display: block !important;
+    }
+  }
+}
+
+.portfolio-more {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 62px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-grey);
+
+  svg {
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+    color: inherit;
+    fill: currentColor;
+    object-fit: cover;
+  }
+}

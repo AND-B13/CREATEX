@@ -15,6 +15,17 @@
     background-position: right top;
   }
 
+  &--work {
+    background-image: url("../img/hero-work-bg.png");
+    background-position: right top;
+  }
+
+  &--work-inner {
+    background-image: url("../img/hero-work-inner-bg.png");
+    background-position: right top;
+    background-color: var(--color-light);
+  }
+
   &__breadcrumbs {
     margin-bottom: 40px;
   }
@@ -29,6 +40,14 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--color-ebony-clay);
+
+    &--small {
+      width: 100%;
+      letter-spacing: 1px;
+      font-size: 64px;
+      line-height: 120%;
+      text-transform: initial;
+    }
   }
 
   &__descr {
